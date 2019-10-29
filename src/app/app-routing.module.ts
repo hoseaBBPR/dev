@@ -13,11 +13,11 @@ export const routes: Routes = [
     redirectTo: '/home',
     pathMatch: 'full'
   },
-  { path: 'home', component: HomeComponent},
-  { path: 'our-story', component: StoryComponent},
-  { path: 'our-sakes', component: SakesComponent},
-  { path: 'find', component: MapComponent},
-  { path: 'contact', component: ContactComponent},
+  { path: 'home', component: HomeComponent, data: {animation: 'Home'} },
+  { path: 'our-story', component: StoryComponent , data: {animation: 'About'}},
+  { path: 'our-sakes', component: SakesComponent,  data: {animation: 'Contact'}},
+  { path: 'find', component: MapComponent, data: {animation: 'Home'}},
+  { path: 'contact', component: ContactComponent, data: {animation: 'About'}},
 
 
 ];
