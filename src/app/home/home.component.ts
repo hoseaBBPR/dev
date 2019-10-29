@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap, NavigationEnd } from '@angular/router';
 import { DomSanitizer, SafeResourceUrl, Title, Meta } from '@angular/platform-browser';
 import { ContentfulService } from '../contentful.service';
-import { ContentfulPreviewService } from '../contentfulPreview.service';
 import { Entry } from 'contentful'
 
 @Component({
@@ -17,8 +16,7 @@ export class HomeComponent implements OnInit {
     private titleService: Title,
     private meta: Meta,
     public sanitizer: DomSanitizer,
-    private contentfulService: ContentfulService,
-    private contentfulPreviewService: ContentfulPreviewService
+    private contentfulService: ContentfulService
   ) {
   }
 
@@ -35,18 +33,7 @@ export class HomeComponent implements OnInit {
         this.meta.updateTag({ property: 'og:site_name', content: home.fields.seoTitle });
         // this.meta.updateTag({ property: 'og:url', content: "https://example.com/home" });
         console.log('home data', this.home);
-
-
-
       });
-      this.contentfulPreviewService.getHomePage(homeId)
-        .then((home) => {
-          this.home = home;
-          console.log('home data', this.home);
-
-
-
-        });
     this.router.events.subscribe((evt) => {
       if (!(evt instanceof NavigationEnd)) {
         return;

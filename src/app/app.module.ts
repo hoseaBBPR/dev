@@ -15,7 +15,6 @@ import {NavComponent} from './shared/nav.component';
 import {FooterComponent} from './shared/footer.component';
 
 import { ContentfulService } from './contentful.service';
-import { ContentfulPreviewService } from './contentfulPreview.service';
 
 
 import {TransferHttpCacheModule} from '@nguniversal/common';
@@ -36,7 +35,7 @@ import {TransferHttpCacheModule} from '@nguniversal/common';
     ScrollToModule.forRoot(),
     TransferHttpCacheModule,
   ],
-  providers: [ContentfulService, ContentfulPreviewService],
+  providers: [ContentfulService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
