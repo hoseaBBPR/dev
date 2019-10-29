@@ -1,3 +1,149 @@
-/* @import "bootstrap/dist/css/bootstrap.min.css"; */
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import "bootstrap/dist/css/bootstrap.min.css";
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
 @import url('https://use.fontawesome.com/releases/v5.7.2/css/all.css');
+
+:root {
+  font-size: 12px;
+}
+
+body {
+  background: #000;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.text-uppercase {
+  letter-spacing: 0.1em;
+}
+
+.text-gray {
+  color: #aaa;
+}
+
+/*
+*
+* ==========================================
+* CUSTOM UTIL CLASSES
+* ==========================================
+*
+*/
+main {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  min-height: 100vh;
+}
+
+.img-logo {
+  margin-top:25px;
+  margin-left:6.5rem;
+  max-height: 125px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.btn-roga {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 60px;
+  right: 60px;
+  color: #FFF;
+  width: 200px;
+  height: 51px;
+  border: 1px solid #FFFFFF;
+  border-radius: 0 !important;
+  font-weight: 500;
+  letter-spacing: 1.02px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  opacity: 1;
+}
+
+.vertical-nav {
+  min-width: 17rem;
+  width: 17rem;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: all 0.4s;
+}
+
+.nav-link {
+  text-align: left;
+  color: #FFF;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1.02px;
+  margin-bottom: 1.2rem;
+  opacity: .5;
+  transition: all 0.4s;
+}
+
+.nav-link:hover {
+  color: #FFF;
+  opacity: 1;
+}
+
+#sidebar a.active {
+  color: #FFF;
+  opacity: 1;
+}
+
+#sidebar a.nav-link::before {
+  display: inline-block;
+  content: "";
+  border-top: 2px solid transparent;
+  width: 55px;
+  margin: 0 1rem;
+  transform: translateY(-.25rem);
+}
+
+#sidebar a.nav-link.active::before {
+  display: inline-block;
+  content: "";
+  border-top: 2px solid white;
+  width: 55px;
+  margin: 0 1rem;
+  transform: translateY(-.25rem);
+}
+
+.page-content {
+  width: calc(100% - 17rem);
+  margin-left: 17rem;
+  transition: all 0.4s;
+}
+
+/* for toggle behavior */
+#sidebar.active {
+  margin-left: -17rem;
+}
+
+#content.active {
+  width: 100%;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  #sidebar {
+    margin-left: -17rem;
+  }
+
+  #sidebar.active {
+    margin-left: 0;
+  }
+
+  #content {
+    width: 100%;
+    margin: 0;
+  }
+
+  #content.active {
+    margin-left: 17rem;
+    width: calc(100% - 17rem);
+  }
+}

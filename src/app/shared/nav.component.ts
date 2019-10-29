@@ -19,6 +19,12 @@ export class NavComponent implements OnInit {
     public router: Router,
     public sanitizer: DomSanitizer
   ) {
+    if(document.getElementById("navScript"))
+        document.getElementById("script").remove();
+        var navScript = document.createElement("script");
+        navScript.setAttribute("id", "navScript");
+        navScript.setAttribute("src", "assets/nav.js");
+        document.body.appendChild(navScript);
   }
 
   ngOnInit() {
