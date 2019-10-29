@@ -1,24 +1,37 @@
-<!-- Vertical navbar -->
+
 <div class="vertical-nav" id="sidebar">
   <a class="logo" routerLink="/">
     <img class="img-logo" src="assets/logos/Roga_logo_white@2x.png" alt="Roga Logo" />
     </a>
-  <ul class="nav flex-column justify-content-center h-100">
+  <ul class="nav flex-column justify-content-center h-75">
     <li class="nav-item">
-      <a class="nav-link active" href="#">Home</a>
+      <a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Our Story</a>
+      <a class="nav-link" routerLink="/our-story" routerLinkActive="active">Our Story</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/our-sakes" routerLinkActive="active">Our Sakes</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="#">Shop</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Find</a>
+      <a class="nav-link" routerLink="/find" routerLinkActive="active">Find</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Contact</a>
+      <a class="nav-link" routerLink="/contact" routerLinkActive="active">Contact</a>
     </li>
   </ul>
+  <!-- <div class="social">
+    <p>Follow</p>
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link" href="https://facebook.com" target="_blank"><i class="fab fa-facebook-square"></i></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      </li>
+      </ul>
+    </div> -->
 </div>
-<!-- End vertical navbar -->
